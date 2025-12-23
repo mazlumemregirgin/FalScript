@@ -46,9 +46,9 @@ const App = () => {
 
             // Check for Early Win? (e.g. one candidate is 30 points ahead)
             // We want to use all available questions or a higher limit
-            const limit = 15;
+            const limit = QUESTIONS.length;
 
-            if (askedQuestions.size >= limit || askedQuestions.size >= QUESTIONS.length) {
+            if (askedQuestions.size >= limit) {
                 finishGame();
                 return;
             }
